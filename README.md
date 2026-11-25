@@ -1,5 +1,11 @@
 # Screen QR
 
+[![CI](https://github.com/leocb/on-screen-qr-code-reader-for-android/actions/workflows/ci.yml/badge.svg)](https://github.com/leocb/on-screen-qr-code-reader-for-android/actions/workflows/ci.yml)
+[![Release](https://github.com/leocb/on-screen-qr-code-reader-for-android/actions/workflows/release.yml/badge.svg)](https://github.com/leocb/on-screen-qr-code-reader-for-android/actions/workflows/release.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+*On Screen QR Code Reader for Android*
+
 An Android app that reads QR codes **shown on your screen** — no second device, no “scan a
 screenshot” round trip — and also scans with the camera.
 
