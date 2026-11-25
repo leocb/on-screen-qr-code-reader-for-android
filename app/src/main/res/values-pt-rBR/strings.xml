@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App e sistema -->
+    <string name="app_name">Screen QR</string>
+    <string name="tile_screen_label">Screen QR</string>
+    <string name="tile_camera_label">Cam QR</string>
+    <string name="tile_subtitle_accessibility">Acessibilidade</string>
+    <string name="tile_subtitle_capture">Captura de tela</string>
+    <string name="tile_subtitle_camera">Câmera</string>
+    <string name="accessibility_description">Lê o QR code mostrado na tela quando as capturas normais são bloqueadas. Tira uma única captura, só no momento em que você pede, e nunca armazena ou envia nada.</string>
+    <string name="accessibility_summary">Alternativa para ler a tela</string>
+    <string name="capture_channel_name">Leitura de tela</string>
+    <string name="capture_channel_description">Aparece enquanto o Screen QR está capturando a tela</string>
+    <string name="results_channel_name">Resultados de leitura</string>
+    <string name="results_channel_description">Aparece quando uma leitura termina com o app em segundo plano</string>
+
+    <!-- Notificação: sessão de captura -->
+    <string name="notification_capture_title">Captura de tela ativa</string>
+    <string name="notification_capture_text">Toque no atalho Screen QR para ler um código</string>
+    <string name="notification_copy">Copiar</string>
+    <string name="notification_no_code_title">Nenhum QR code encontrado</string>
+
+    <!-- Tela inicial -->
+    <string name="home_subtitle">Leia QR codes mostrados na tela ou use a câmera</string>
+    <string name="action_read_screen">Ler QR nesta tela</string>
+    <string name="action_read_screen_caption">Inicia um timer de 10 segundos para você trocar de app</string>
+    <string name="action_read_screen_caption_accessibility">alternativa por acessibilidade</string>
+    <string name="action_read_screen_caption_permission">pede permissão de captura uma vez</string>
+    <string name="action_camera">Escanear com a câmera</string>
+    <string name="action_camera_caption">Aponte a câmera para o código</string>
+    <string name="tip_tiles">Dica: os atalhos nas Configurações rápidas ignoram o timer de 10 segundos e leem a tela no lugar, sem sair do app que mostra o QR code.</string>
+
+    <string name="section_tiles">Atalhos nas Configurações rápidas</string>
+    <string name="tile_row_screen">Ler tela</string>
+    <string name="tile_row_screen_subtitle">Adiciona o atalho \"%1$s\"</string>
+    <string name="tile_row_camera">Escanear com câmera</string>
+    <string name="tile_row_camera_subtitle">Adiciona o atalho \"%1$s\"</string>
+    <string name="action_add">Adicionar</string>
+    <string name="toast_add_tile_manual">Abra as Configurações rápidas, toque no lápis e arraste “%1$s” para o painel</string>
+    <string name="toast_add_tile_failed">Abra as Configurações rápidas e adicione o atalho manualmente</string>
+
+    <string name="section_accessibility">Alternativa por acessibilidade</string>
+    <string name="status_enabled">Ativado</string>
+    <string name="status_off">Desativado</string>
+    <string name="action_manage">Gerenciar</string>
+    <string name="action_enable">Ativar</string>
+    <string name="accessibility_body">Opcional. Alguns apps escondem o conteúdo das capturas de tela. Ative o serviço de acessibilidade do Screen QR para o app tirar uma única captura, sem o diálogo de captura do sistema. Ele não lê mais nada e a captura nunca sai do aparelho.</string>
+    <string name="accessibility_secure_note">Telas marcadas com FLAG_SECURE (apps de banco, streaming, algumas carteiras) retornam um quadro preto para qualquer método, inclusive acessibilidade.</string>
+
+    <string name="section_reading_method">Método de leitura</string>
+    <string name="engine_auto">Automático</string>
+    <string name="engine_auto_subtitle">Acessibilidade quando ativa, senão o diálogo de captura do sistema</string>
+    <string name="engine_accessibility">Somente acessibilidade</string>
+    <string name="engine_accessibility_subtitle">Sem diálogo, mas precisa do serviço ativado</string>
+    <string name="engine_projection">Somente captura de tela</string>
+    <string name="engine_projection_subtitle">Diálogo do sistema, funciona sem acessibilidade</string>
+    <string name="setting_auto_copy">Copiar após escanear</string>
+    <string name="setting_auto_copy_subtitle">Coloca o valor bruto na área de transferência assim que um código é lido</string>
+    <string name="setting_keep_session">Manter a sessão de captura ativa</string>
+    <string name="setting_keep_session_subtitle">Uma permissão só, depois cada leitura é instantânea. O Android mantém uma notificação de captura enquanto a sessão estiver ativa.</string>
+    <string name="status_session_on">Sessão ativa</string>
+    <string name="action_stop">Parar</string>
+
+    <string name="section_history">Histórico</string>
+    <string name="action_clear">Limpar</string>
+    <string name="history_row">%1$s · %2$s</string>
+
+    <string name="section_how">Como funciona</string>
+    <string name="how_camera">A câmera usa o ML Kit, totalmente no aparelho.</string>
+    <string name="how_local">A leitura de tela pega um quadro e decodifica localmente; nada é enviado e o app não tem permissão de rede.</string>
+    <string name="how_session">Com a sessão ativa, a permissão de captura é pedida uma vez, não a cada leitura; a alternativa por acessibilidade não usa diálogo de permissão.</string>
+    <string name="how_payments">Pix e outros códigos de pagamento são copiados para a área de transferência porque os bancos só aceitam o código colado.</string>
+    <string name="how_secure">Telas seguras sempre voltam pretas; use a câmera nesses casos.</string>
+    <string name="about_version">Screen QR · v%1$s</string>
+
+    <string name="section_language">Idioma</string>
+    <string name="language_label">Idioma do app</string>
+    <string name="language_note">Muda apenas este app. A leitura funciona igual em qualquer idioma.</string>
+    <string name="language_system">Padrão do sistema</string>
+    <string name="language_system_subtitle">Segue o idioma do aparelho</string>
+
+    <!-- Tempo relativo -->
+    <string name="time_just_now">agora</string>
+    <plurals name="time_minutes_ago">
+        <item quantity="one">há %d min</item>
+        <item quantity="other">há %d min</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">há %d h</item>
+        <item quantity="other">há %d h</item>
+    </plurals>
+    <string name="time_yesterday">ontem</string>
+
+    <!-- Cartão de resultado -->
+    <string name="action_close">Fechar</string>
+    <string name="action_scan_again">Escanear de novo</string>
+    <string name="action_read_again">Ler de novo</string>
+    <string name="action_open">Abrir</string>
+    <string name="action_copy">Copiar</string>
+    <string name="action_copied">Copiado</string>
+    <string name="action_share">Compartilhar</string>
+    <string name="action_open_with">Abrir com…</string>
+    <string name="action_wifi_settings">Configurações de Wi-Fi</string>
+    <string name="action_show">Mostrar</string>
+    <string name="action_hide">Ocultar</string>
+    <string name="toast_field_copied">%1$s copiado</string>
+    <string name="share_chooser_title">Compartilhar QR code</string>
+    <string name="open_with_chooser_title">Abrir com</string>
+    <string name="toast_no_app">Nenhum app neste aparelho consegue abrir isto</string>
+    <string name="toast_no_handler">Nenhum app consegue lidar com isto</string>
+    <string name="toast_action_denied">Esta ação não é permitida</string>
+    <string name="clip_label_qr">Valor do QR</string>
+
+    <!-- Sobreposição do scanner -->
+    <string name="scan_countdown_hint">Vá para o app com o QR code</string>
+    <string name="error_accessibility_off_title">A alternativa por acessibilidade está desligada</string>
+    <string name="error_accessibility_off_message">O Screen QR está configurado para usar o serviço de acessibilidade, mas ele não está ativado. Ative em Configurações → Acessibilidade → Screen QR, ou mude o método de leitura para captura de tela.</string>
+    <string name="error_secure_title">Esta tela bloqueia capturas</string>
+    <string name="error_secure_message">O app que você está escaneando marca a janela como segura (FLAG_SECURE), então o Android devolve um quadro preto para qualquer método de captura. Nada no aparelho consegue ler essa imagem. Use a câmera ou escaneie o código de outra tela.</string>
+    <string name="error_denied_title">A leitura da tela não foi autorizada</string>
+    <string name="error_denied_message">O Android pede sua permissão a cada sessão de captura. Toque em “Tentar de novo” e escolha “Compartilhar tela” no diálogo do sistema.</string>
+    <string name="error_timeout_title">A tela não respondeu</string>
+    <string name="error_timeout_message">A captura não terminou a tempo. Tente de novo ou use a câmera.</string>
+    <string name="error_no_code_title">Nenhum QR code encontrado</string>
+    <string name="error_no_code_message">Nada na tela parecia um QR code. Verifique se o código está inteiro e nítido e tente de novo.</string>
+    <string name="error_capture_failed_title">Não foi possível ler a tela</string>
+    <string name="error_capture_failed_message">Algo deu errado ao tirar a captura. Tente de novo ou use a câmera.</string>
+    <string name="error_text_found">Texto encontrado na tela</string>
+    <string name="action_copy_text">Copiar este texto</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_try_again">Tentar de novo</string>
+
+    <!-- Câmera -->
+    <string name="camera_title">Câmera</string>
+    <string name="action_torch">Lanterna</string>
+    <string name="action_torch_on">Lanterna ligada</string>
+    <string name="camera_hint">Mantenha o QR code dentro da moldura</string>
+    <string name="camera_permission_title">Permissão da câmera necessária</string>
+    <string name="camera_unavailable_title">Câmera indisponível</string>
+    <string name="camera_permission_message">Para escanear com a câmera é preciso liberar a permissão. Você ainda pode ler códigos da tela.</string>
+    <string name="camera_error_message">Não foi possível iniciar a câmera.</string>
+    <string name="action_allow_camera">Permitir câmera</string>
+    <string name="action_app_settings">Configurações do app</string>
+
+    <!-- Tipos de conteúdo -->
+    <string name="kind_link">Link</string>
+    <string name="kind_wifi">Wi-Fi</string>
+    <string name="kind_phone">Telefone</string>
+    <string name="kind_email">E-mail</string>
+    <string name="kind_sms">Mensagem</string>
+    <string name="kind_location">Local</string>
+    <string name="kind_contact">Contato</string>
+    <string name="kind_otp">Código 2FA</string>
+    <string name="kind_app">Link de app</string>
+    <string name="kind_payment">Pagamento</string>
+    <string name="kind_text">Texto</string>
+
+    <!-- Títulos do conteúdo -->
+    <string name="headline_otp">Configuração de autenticador</string>
+    <string name="headline_phone">Número de telefone</string>
+    <string name="headline_email">Endereço de e-mail</string>
+    <string name="headline_location">Localização</string>
+    <string name="headline_web_link">Link da web</string>
+    <string name="headline_play_store">Link da Play Store</string>
+    <string name="headline_app_link">Link de app</string>
+    <string name="headline_text">Texto</string>
+    <string name="headline_upi">Pagamento UPI</string>
+    <string name="headline_pix">Pagamento Pix</string>
+    <string name="headline_payment_code">Código de pagamento</string>
+    <string name="headline_wifi">Rede Wi-Fi</string>
+    <string name="headline_sms">Mensagem de texto</string>
+    <string name="headline_contact">Contato</string>
+    <string name="headline_crypto">Pagamento em cripto</string>
+    <string name="headline_bitcoin">Pagamento em Bitcoin</string>
+    <string name="headline_ethereum">Pagamento em Ethereum</string>
+    <string name="headline_solana">Pagamento em Solana</string>
+    <string name="headline_litecoin">Pagamento em Litecoin</string>
+    <string name="headline_dogecoin">Pagamento em Dogecoin</string>
+    <string name="headline_monero">Pagamento em Monero</string>
+    <string name="headline_dash">Pagamento em Dash</string>
+    <string name="headline_zcash">Pagamento em Zcash</string>
+    <string name="headline_lightning">Fatura Lightning</string>
+
+    <!-- Valores do conteúdo -->
+    <string name="value_pix_code">Código Pix copia e cola</string>
+    <string name="value_payment_code">Código de pagamento</string>
+    <string name="value_no_name">(sem nome)</string>
+    <string name="value_unnamed_contact">(contato sem nome)</string>
+    <string name="value_yes">Sim</string>
+
+    <!-- Rótulos dos campos -->
+    <string name="field_network">Rede</string>
+    <string name="field_security">Segurança</string>
+    <string name="field_password">Senha</string>
+    <string name="field_hidden">Oculta</string>
+    <string name="field_pix_key">Chave Pix</string>
+    <string name="field_description">Descrição</string>
+    <string name="field_merchant">Estabelecimento</string>
+    <string name="field_city">Cidade</string>
+    <string name="field_amount">Valor</string>
+    <string name="field_scheme">Esquema</string>
+    <string name="field_payee_id">ID do recebedor</string>
+    <string name="field_note">Observação</string>
+    <string name="field_label">Rótulo</string>
+    <string name="field_message">Mensagem</string>
+    <string name="field_phone">Telefone</string>
+    <string name="field_email">E-mail</string>
+    <string name="field_address">Endereço</string>
+    <string name="field_organisation">Organização</string>
+    <string name="field_title">Cargo</string>
+
+    <!-- Observações -->
+    <string name="note_otp">Este é um URI de configuração de autenticação em dois fatores. Adicione no seu app autenticador.</string>
+    <string name="note_wifi">O Android não entra numa rede direto pelo QR code. Copie a senha e escolha a rede nas configurações de Wi-Fi.</string>
+    <string name="note_upi">Abre o app UPI que você escolher. Confira o recebedor e o valor antes de confirmar.</string>
+    <string name="note_pix">Copie o código e use o “Pix copia e cola” no seu app de banco. Não existe um link universal que abra um pagamento Pix direto.</string>
+    <string name="note_payment">Códigos de pagamento são colados no app de banco ou de pagamento que os gerou.</string>
+    <string name="note_crypto">Qualquer carteira instalada que aceite links %1$s consegue abrir isto.</string>
+
+    <!-- Ações do conteúdo -->
+    <string name="label_dial">Ligar</string>
+    <string name="label_compose">Escrever</string>
+    <string name="label_open_map">Abrir mapa</string>
+    <string name="label_open_link">Abrir link</string>
+    <string name="label_open_in_store">Abrir na Play Store</string>
+    <string name="label_open_in_app">Abrir no app</string>
+    <string name="label_open">Abrir</string>
+    <string name="label_open_messages">Abrir mensagens</string>
+    <string name="label_pay_with_app">Pagar com app</string>
+    <string name="label_open_wallet">Abrir carteira</string>
+
+</resources>

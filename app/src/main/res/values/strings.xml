@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App and system -->
+    <string name="app_name">Screen QR</string>
+    <string name="tile_screen_label">Screen QR</string>
+    <string name="tile_camera_label">Cam QR</string>
+    <string name="tile_subtitle_accessibility">Accessibility</string>
+    <string name="tile_subtitle_capture">Screen capture</string>
+    <string name="tile_subtitle_camera">Camera</string>
+    <string name="accessibility_description">Reads the QR code shown on your screen when normal screenshots are blocked. It only takes a single screenshot, at the moment you ask for one, and never stores or uploads it.</string>
+    <string name="accessibility_summary">Screen-reading fallback</string>
+    <string name="capture_channel_name">Screen reading</string>
+    <string name="capture_channel_description">Shows when Screen QR is capturing your screen</string>
+    <string name="results_channel_name">Scan results</string>
+    <string name="results_channel_description">Shown when a scan finishes while the app is in the background</string>
+
+    <!-- Notification: live capture session -->
+    <string name="notification_capture_title">Screen capture is on</string>
+    <string name="notification_capture_text">Tap a Screen QR tile to read a code</string>
+    <string name="notification_copy">Copy</string>
+    <string name="notification_no_code_title">No QR code found</string>
+
+    <!-- Home screen -->
+    <string name="home_subtitle">Read QR codes shown on screen, or with the camera</string>
+    <string name="action_read_screen">Read QR on this screen</string>
+    <string name="action_read_screen_caption">Starts a 10 second timer so you can switch apps</string>
+    <string name="action_read_screen_caption_accessibility">accessibility fallback</string>
+    <string name="action_read_screen_caption_permission">asks for capture permission once</string>
+    <string name="action_camera">Scan with the camera</string>
+    <string name="action_camera_caption">Point the camera at the code</string>
+    <string name="tip_tiles">Tip: the Quick Settings tiles skip the 10 second timer and read the screen in place, without leaving the app that shows the QR code.</string>
+
+    <string name="section_tiles">Quick Settings tiles</string>
+    <string name="tile_row_screen">Read screen</string>
+    <string name="tile_row_screen_subtitle">Adds the \"%1$s\" tile</string>
+    <string name="tile_row_camera">Scan with camera</string>
+    <string name="tile_row_camera_subtitle">Adds the \"%1$s\" tile</string>
+    <string name="action_add">Add</string>
+    <string name="toast_add_tile_manual">Open Quick Settings, tap the pencil, then drag “%1$s” into the panel</string>
+    <string name="toast_add_tile_failed">Open Quick Settings and add the tile manually</string>
+
+    <string name="section_accessibility">Accessibility fallback</string>
+    <string name="status_enabled">Enabled</string>
+    <string name="status_off">Off</string>
+    <string name="action_manage">Manage</string>
+    <string name="action_enable">Enable</string>
+    <string name="accessibility_body">Optional. Some apps hide their content from screenshots. Turn on the Screen QR accessibility service to let this app take a single screenshot instead, without the system capture dialog. It reads nothing else and the screenshot never leaves the device.</string>
+    <string name="accessibility_secure_note">Screens marked FLAG_SECURE (banking apps, streaming apps, some wallets) return a black frame to every method, accessibility included.</string>
+
+    <string name="section_reading_method">Reading method</string>
+    <string name="engine_auto">Automatic</string>
+    <string name="engine_auto_subtitle">Accessibility when it is on, otherwise the system capture dialog</string>
+    <string name="engine_accessibility">Accessibility only</string>
+    <string name="engine_accessibility_subtitle">No dialog, but needs the service enabled</string>
+    <string name="engine_projection">Screen capture only</string>
+    <string name="engine_projection_subtitle">System dialog, works without accessibility</string>
+    <string name="setting_auto_copy">Copy after scanning</string>
+    <string name="setting_auto_copy_subtitle">Puts the raw value on the clipboard as soon as a code is read</string>
+    <string name="setting_keep_session">Keep the capture session alive</string>
+    <string name="setting_keep_session_subtitle">One permission prompt, then every scan is instant. Android keeps a capture notification while the session runs.</string>
+    <string name="status_session_on">Session on</string>
+    <string name="action_stop">Stop</string>
+
+    <string name="section_history">History</string>
+    <string name="action_clear">Clear</string>
+    <string name="history_row">%1$s · %2$s</string>
+
+    <string name="section_how">How it works</string>
+    <string name="how_camera">The camera path uses ML Kit, fully on device.</string>
+    <string name="how_local">Screen reading grabs one frame and decodes it locally; nothing is uploaded and the app has no network permission.</string>
+    <string name="how_session">With the session alive the capture permission is asked once, not per scan; the accessibility fallback needs no permission dialog at all.</string>
+    <string name="how_payments">Pix and other payment codes are copied to the clipboard because banks only accept the pasted code.</string>
+    <string name="how_secure">Secure windows always come back black; use the camera for those.</string>
+    <string name="about_version">Screen QR · v%1$s</string>
+
+    <string name="section_language">Language</string>
+    <string name="language_label">App language</string>
+    <string name="language_note">Changes this app only. Scanning works the same in any language.</string>
+    <string name="language_system">System default</string>
+    <string name="language_system_subtitle">Follow the device language</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_portuguese" translatable="false">Português (Brasil)</string>
+
+    <!-- Relative time -->
+    <string name="time_just_now">just now</string>
+    <plurals name="time_minutes_ago">
+        <item quantity="one">%d min ago</item>
+        <item quantity="other">%d min ago</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">%d h ago</item>
+        <item quantity="other">%d h ago</item>
+    </plurals>
+    <string name="time_yesterday">yesterday</string>
+
+    <!-- Result card -->
+    <string name="action_close">Close</string>
+    <string name="action_scan_again">Scan again</string>
+    <string name="action_read_again">Read again</string>
+    <string name="action_open">Open</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_copied">Copied</string>
+    <string name="action_share">Share</string>
+    <string name="action_open_with">Open with…</string>
+    <string name="action_wifi_settings">Wi-Fi settings</string>
+    <string name="action_show">Show</string>
+    <string name="action_hide">Hide</string>
+    <string name="toast_field_copied">%1$s copied</string>
+    <string name="share_chooser_title">Share QR code</string>
+    <string name="open_with_chooser_title">Open with</string>
+    <string name="toast_no_app">No app on this device can open this</string>
+    <string name="toast_no_handler">No app can handle this</string>
+    <string name="toast_action_denied">This action is not allowed</string>
+    <string name="clip_label_qr">QR value</string>
+
+    <!-- Scanner overlay -->
+    <string name="scan_countdown_hint">Switch to the app with the QR code</string>
+    <string name="error_accessibility_off_title">Accessibility fallback is off</string>
+    <string name="error_accessibility_off_message">Screen QR is set to use the accessibility service, but it is not enabled. Turn it on in Settings → Accessibility → Screen QR, or switch the reading method to screen capture.</string>
+    <string name="error_secure_title">This screen blocks screenshots</string>
+    <string name="error_secure_message">The app you are scanning marks its window as secure (FLAG_SECURE), so Android returns a black frame to every capture method. Nothing on the device can read that image. Use the camera instead, or scan the code from another screen.</string>
+    <string name="error_denied_title">Screen reading was not allowed</string>
+    <string name="error_denied_message">Android needs your permission for each capture session. Tap “Try again” and choose “Share screen” in the system dialog.</string>
+    <string name="error_timeout_title">The screen did not respond</string>
+    <string name="error_timeout_message">The capture did not finish in time. Try again, or use the camera.</string>
+    <string name="error_no_code_title">No QR code found</string>
+    <string name="error_no_code_message">Nothing on the screen looked like a QR code. Make sure the whole code is visible and not blurred, then try again.</string>
+    <string name="error_capture_failed_title">Could not read the screen</string>
+    <string name="error_capture_failed_message">Something went wrong while taking the screenshot. Try again, or use the camera.</string>
+    <string name="error_text_found">Text found on screen</string>
+    <string name="action_copy_text">Copy this text</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_try_again">Try again</string>
+
+    <!-- Camera -->
+    <string name="camera_title">Camera</string>
+    <string name="action_torch">Torch</string>
+    <string name="action_torch_on">Torch on</string>
+    <string name="camera_hint">Hold the QR code inside the frame</string>
+    <string name="camera_permission_title">Camera permission needed</string>
+    <string name="camera_unavailable_title">Camera unavailable</string>
+    <string name="camera_permission_message">Camera QR scanning needs the camera permission. You can still read codes from the screen.</string>
+    <string name="camera_error_message">The camera could not be started.</string>
+    <string name="action_allow_camera">Allow camera</string>
+    <string name="action_app_settings">App settings</string>
+
+    <!-- Payload kinds -->
+    <string name="kind_link">Link</string>
+    <string name="kind_wifi">Wi-Fi</string>
+    <string name="kind_phone">Phone</string>
+    <string name="kind_email">Email</string>
+    <string name="kind_sms">Message</string>
+    <string name="kind_location">Location</string>
+    <string name="kind_contact">Contact</string>
+    <string name="kind_otp">2FA code</string>
+    <string name="kind_app">App link</string>
+    <string name="kind_payment">Payment</string>
+    <string name="kind_text">Text</string>
+
+    <!-- Payload headlines -->
+    <string name="headline_otp">Authenticator setup</string>
+    <string name="headline_phone">Phone number</string>
+    <string name="headline_email">Email address</string>
+    <string name="headline_location">Location</string>
+    <string name="headline_web_link">Web link</string>
+    <string name="headline_play_store">Play Store link</string>
+    <string name="headline_app_link">App link</string>
+    <string name="headline_text">Text</string>
+    <string name="headline_upi">UPI payment</string>
+    <string name="headline_pix">Pix payment</string>
+    <string name="headline_payment_code">Payment code</string>
+    <string name="headline_wifi">Wi-Fi network</string>
+    <string name="headline_sms">Text message</string>
+    <string name="headline_contact">Contact</string>
+    <string name="headline_crypto">Crypto payment</string>
+    <string name="headline_bitcoin">Bitcoin payment</string>
+    <string name="headline_ethereum">Ethereum payment</string>
+    <string name="headline_solana">Solana payment</string>
+    <string name="headline_litecoin">Litecoin payment</string>
+    <string name="headline_dogecoin">Dogecoin payment</string>
+    <string name="headline_monero">Monero payment</string>
+    <string name="headline_dash">Dash payment</string>
+    <string name="headline_zcash">Zcash payment</string>
+    <string name="headline_lightning">Lightning invoice</string>
+
+    <!-- Payload values -->
+    <string name="value_pix_code">Pix copy-and-paste code</string>
+    <string name="value_payment_code">Payment code</string>
+    <string name="value_no_name">(no name)</string>
+    <string name="value_unnamed_contact">(unnamed contact)</string>
+    <string name="value_yes">Yes</string>
+
+    <!-- Payload field labels -->
+    <string name="field_network">Network</string>
+    <string name="field_security">Security</string>
+    <string name="field_password">Password</string>
+    <string name="field_hidden">Hidden</string>
+    <string name="field_pix_key">Pix key</string>
+    <string name="field_description">Description</string>
+    <string name="field_merchant">Merchant</string>
+    <string name="field_city">City</string>
+    <string name="field_amount">Amount</string>
+    <string name="field_scheme">Scheme</string>
+    <string name="field_payee_id">Payee ID</string>
+    <string name="field_note">Note</string>
+    <string name="field_label">Label</string>
+    <string name="field_message">Message</string>
+    <string name="field_phone">Phone</string>
+    <string name="field_email">Email</string>
+    <string name="field_address">Address</string>
+    <string name="field_organisation">Organisation</string>
+    <string name="field_title">Title</string>
+
+    <!-- Payload notes -->
+    <string name="note_otp">This is a two-factor authentication setup URI. Add it in your authenticator app.</string>
+    <string name="note_wifi">Android cannot join a network straight from a QR code. Copy the password, then pick the network in Wi-Fi settings.</string>
+    <string name="note_upi">Opens the UPI app you pick. Check the payee and amount before confirming.</string>
+    <string name="note_pix">Copy the code, then use “Pix copia e cola” in your banking app. There is no universal link that opens a Pix payment directly.</string>
+    <string name="note_payment">Payment codes are pasted into the banking or payment app that issued them.</string>
+    <string name="note_crypto">Any installed wallet that supports %1$s links can take this.</string>
+
+    <!-- Payload action labels -->
+    <string name="label_dial">Dial</string>
+    <string name="label_compose">Compose</string>
+    <string name="label_open_map">Open map</string>
+    <string name="label_open_link">Open link</string>
+    <string name="label_open_in_store">Open in Play Store</string>
+    <string name="label_open_in_app">Open in app</string>
+    <string name="label_open">Open</string>
+    <string name="label_open_messages">Open messages</string>
+    <string name="label_pay_with_app">Pay with app</string>
+    <string name="label_open_wallet">Open wallet</string>
+
+</resources>
