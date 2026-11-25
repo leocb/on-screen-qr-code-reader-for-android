@@ -42,9 +42,13 @@ jobs:
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: |
           VERSION_NAME="${GITHUB_REF_NAME#v}"
+          # v1.2.3 -> 10203 so Play uploads always increase; non-semver tags use the run number.
+          VERSION_CODE=$(echo "$VERSION_NAME" | awk -F. 'NF==3 && $1+0==$1 && $2+0==$2 && $3+0==$3 {printf "%d%02d%02d", $1, $2, $3}')
+          if [ -z "$VERSION_CODE" ]; then VERSION_CODE="$GITHUB_RUN_NUMBER"; fi
+          echo "Building version $VERSION_NAME ($VERSION_CODE)"
           ./gradlew :app:assembleRelease \
             -PappVersionName="$VERSION_NAME" \
-            -PappVersionCode="$GITHUB_RUN_NUMBER" \
+            -PappVersionCode="$VERSION_CODE" \
             --stacktrace
 
       - name: Verify signature

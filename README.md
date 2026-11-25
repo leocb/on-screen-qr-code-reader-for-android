@@ -225,8 +225,9 @@ app/src/main/java/com/leocb/screenqr/
   git push origin v1.0.0
   ```
 
-  The version name comes from the tag (`v1.0.0` → `1.0.0`) and the version code from the workflow
-  run number. The workflow verifies the signature with `apksigner` and attaches
+  The version name comes from the tag (`v1.0.0` → `1.0.0`) and the version code is derived from it
+  (`v1.2.3` → `10203`), so every Play upload increases. The workflow verifies the signature with
+  `apksigner` and attaches
   `ScreenQR-v1.0.0.apk` to the GitHub release.
 
 Signing material is read from environment variables (`ANDROID_KEYSTORE_FILE`,
